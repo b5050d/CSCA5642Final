@@ -3,7 +3,6 @@ First attempt at carpole
 
 Going to try to make this into my final
 
-
 # TODO - before running, pre-emptively map out the Decay of the epsilon over
 epis to make sure it makes sense
 
@@ -12,10 +11,8 @@ epis to make sure it makes sense
 # TODO - add batching of training
 # TODO - add different models - starting with a big boy model
 
-
 # TODO - if the model is the best so far, save it
     # The reason for this is because we jsut want to see what its doing
-
 
 """
 
@@ -249,8 +246,13 @@ class CartPoleModel():
         print("========================================")
         print("")
 
-
+    def test_loop(self):
+        state = self.env.reset()
+        state = np.reshape(state[0], [1,self.n_states])
+        print(state)
+        print(state.shape)
+        
 if __name__=="__main__":
     a = CartPoleModel()
-    # a.test_loop()
-    a.main_loop()
+    a.test_loop()
+    # a.main_loop()
