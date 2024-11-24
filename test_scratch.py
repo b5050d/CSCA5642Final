@@ -82,7 +82,7 @@ def test_normalize_data():
     assert ans[0][2] == -1
     assert ans[0][3] == -1
 
-    a = np.array([[4.8,5,.418,5]])
+    a = narray([[4.8,5,.418,5]])
     ans = normalize_data(a)
     assert ans[0][0] == 1
     assert ans[0][1] == 1
